@@ -9,15 +9,17 @@ Here's an example:
 Plaintext: "HELLO WORLD"
 Shift value: 3
 Ciphertext: "KHORZRUOG" \n\n\n""")
-inputter = input("Enter the  secret word : ")
+inputter = input("Enter the  secret word or enter "quit" for leaving : ")
 shifting = int(input("Enter the number for shifting : "))
 
 cipherisied = ""
-for i in inputter:
+while inputter == "quit":
+ for i in inputter:
     if i.isspace():continue
     else:
        if ord(i)>= ord("Z") or ord(i) >= ord("z"):
          coder = ord(i)+shifting
          cipherisied += chr(coder)
+ break
 
 print(cipherisied)
