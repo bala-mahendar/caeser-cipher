@@ -12,14 +12,15 @@ Ciphertext: "KHORZRUOG" \n\n\n""")
 inputter = input("Enter the  secret word or enter "quit" for leaving : ")
 shifting = int(input("Enter the number for shifting : "))
 
-cipherisied = ""
-while inputter == "quit":
- for i in inputter:
+def caeser_cipher(str,num):
+ cipherisied = ""
+ while str == "quit":
+  for i in str:
     if i.isspace():continue
     else:
        if ord(i)>= ord("Z") or ord(i) >= ord("z"):
-         coder = ord(i)+shifting
+         coder = ord(i)+num
          cipherisied += chr(coder)
- break
+   break
 
-print(cipherisied)
+print(caeser_cipher(inputter, shifting))
